@@ -1,0 +1,1 @@
+# flagebear-ts-core
