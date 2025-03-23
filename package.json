@@ -1,0 +1,57 @@
+{
+  "name": "@flagbear/flagbear-core",
+  "version": "3.0.0",
+  "description": "core for flagbear",
+  "type": "module",
+  "contributors": [
+    "Alvaro <contact@alvarolorente.dev>"
+  ],
+  "repository": "git@github.com:flagbear/flagbear-ts-core.git",
+  "license": "APACHE-2.0",
+  "homepage": "https://www.flagbear.com/",
+  "keywords": [
+    "serverless",
+    "flags",
+    "toggles"
+  ],
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/flagbear-core.umd.cjs",
+  "module": "./dist/flagbear-core.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "import": "./dist/flagbear-core.js",
+    "require": "./dist/flagbear-core.umd.cjs"
+  },
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "tsc && vite build",
+    "format": "prettier --write \"**/*.ts\"",
+    "lint": "eslint . --max-warnings 0",
+    "test": "npm run format && npm run lint && vitest",
+    "test:dev": "vitest --watchAll",
+    "test:cov": "vitest --coverage && codecov",
+    "push": "npm run test && git push",
+    "deploy:major": "npm run version --major",
+    "deploy:minor": "npm run version --minor",
+    "deploy:patch": "npm run version --patch",
+    "deploy:push": "git push && git push --tags",
+    "preversion": "npm run test",
+    "dev": "vite"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "8.3.0",
+    "@typescript-eslint/parser": "8.3.0",
+    "eslint": "8.57.0",
+    "prettier": "3.5.3",
+    "typescript": "5.8.2",
+    "vite": "6.2.2",
+    "vite-plugin-dts": "4.5.3",
+    "vitest": "3.0.9"
+  },
+  "dependencies": {
+    "axios": "1.8.3"
+  }
+}

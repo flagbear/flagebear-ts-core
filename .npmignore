@@ -1,0 +1,12 @@
+.vscode
+.github
+src
+lib
+.eslintrc.cjs
+.gitignore
+.prettierrc
+CODE_OF_CONDUCT.md
+index.html
+tsconfig.json
+vite.config.json
+coverage
