@@ -52,6 +52,6 @@
     "vitest": "3.0.9"
   },
   "dependencies": {
-    "axios": "1.8.3"
+    "axios": "1.12.0"
   }
 }
